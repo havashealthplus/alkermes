@@ -1,0 +1,344 @@
+/*------------------
+     general
+------------------*/
+@font-face {
+  font-family: 'GalaxieCopernicus-Book';
+  src: url('GalaxieCopernicus-Book.eot');
+  src: url('GalaxieCopernicus-Book.woff2') format('woff2'),
+       url('GalaxieCopernicus-Book.woff') format('woff'),
+       url('GalaxieCopernicus-Book.ttf') format('truetype'),
+       url('GalaxieCopernicus-Book.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body {
+  height: 100%; 
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'GalaxieCopernicus-Book', sans-serif;
+  font-size: 62.5%;
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1, h2, h3,
+h4, h5, h6,
+p, span, a {
+	margin-top: 0;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: -0.05rem;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+     -moz-font-smoothing: antialiased;
+       -o-font-smoothing: antialiased;
+}
+
+article, section, footer {
+  outline: none;
+}
+
+
+/*------------------
+      article
+------------------*/
+article {
+	position: relative;
+  min-height: 100%; 
+  width: 100%;
+  margin: 0;
+  clear: both;
+}
+
+section {
+  padding: 2.5rem 0;
+}
+
+
+/*-----------------
+    navigation
+-----------------*/
+header {
+  position: absolute;
+  z-index: 1;
+  height: 5rem;
+  width: 100%;
+}
+
+header img {
+  max-height: 4rem;
+  width: auto;
+  margin-top: 1.5rem;
+}
+
+@media screen and (min-width: 801px) {
+  header img {
+    max-height: 5rem;
+  }
+}
+
+.right {
+  float: right;
+}
+
+
+/*-----------------
+   introduction
+-----------------*/
+#intro {
+  padding-top: 12.5rem;
+}
+
+.page-title {
+  margin-bottom: 1rem;
+  font-family: 'Helvetica', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: -0.12rem;
+  text-align: center;
+}
+
+.page-subtitle {
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 576px) {
+  .page-title {
+    font-size: 4rem;
+    letter-spacing: -0.15rem;
+  }
+  .page-subtitle {
+    font-size: 2.2rem;
+    line-height: 3.3rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #intro {
+    padding-top: 15rem;
+  }
+  .page-title {
+    font-size: 6rem;
+    letter-spacing: -0.25rem;
+  }
+  .page-subtitle {
+    font-size: 2.5rem;
+    line-height: 3.75rem;
+  }
+}
+
+
+/*-----------------
+     timeline
+-----------------*/
+.timeline {
+  list-style: none;
+  padding: 75px 0 75px;
+  position: relative;
+}
+
+.timeline:before {
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  content: " ";
+  width: 1px;
+  background-color: rgba(0,0,0,.15);
+  left: 50%;
+  margin-left: -0.5px;
+}
+
+.timeline > li {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.timeline > li:before,
+.timeline > li:after {
+  content: " ";
+  display: table;
+}
+
+.timeline > li:after {
+  clear: both;
+}
+
+.timeline > li:before,
+.timeline > li:after {
+  content: " ";
+  display: table;
+}
+
+.timeline > li:after {
+  clear: both;
+}
+
+.timeline > li > .timeline-panel {
+  width: 100%;
+  float: left;
+  border-radius: 2px;
+  padding: 20px;
+  position: relative;
+  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+  background: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  .timeline > li > .timeline-panel {
+    width: 46%;
+  }
+  /*.timeline > li > .timeline-panel:before {
+    position: absolute;
+    top: 26px;
+    right: -15px;
+    display: inline-block;
+    border-top: 15px solid transparent;
+    border-left: 15px solid #ccc;
+    border-right: 0 solid #ccc;
+    border-bottom: 15px solid transparent;
+    content: " ";
+  }
+
+  .timeline > li > .timeline-panel:after {
+    position: absolute;
+    top: 27px;
+    right: -14px;
+    display: inline-block;
+    border-top: 14px solid transparent;
+    border-left: 14px solid #fff;
+    border-right: 0 solid #fff;
+    border-bottom: 14px solid transparent;
+    content: " ";
+  }*/
+}
+
+.timeline > li.timeline-inverted > .timeline-panel {
+  float: right;
+}
+
+.timeline > li.timeline-inverted > .timeline-panel:before {
+  border-left-width: 0;
+  border-right-width: 15px;
+  left: -15px;
+  right: auto;
+}
+
+.timeline > li.timeline-inverted > .timeline-panel:after {
+  border-left-width: 0;
+  border-right-width: 14px;
+  left: -14px;
+  right: auto;
+}
+
+.timeline-title {
+  margin-top: 0;
+  color: inherit;
+}
+
+.timeline-body > p,
+.timeline-body > ul {
+  margin-bottom: 0;
+}
+
+.timeline-body > p + p {
+  margin-top: 5px;
+}
+
+.timeline-body {
+  margin: 10px 0px;
+}
+
+.timeline-heading {
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ddd;
+}
+
+/*-----------------
+      quotes
+-----------------*/
+.quote {
+  font-size: 1.8rem;
+  line-height: 3rem;
+}
+
+.author {
+  color: #f00;
+}
+
+@media screen and (min-width: 576px) {
+  .quote {
+    font-size: 2.2rem;
+    line-height: 3.7rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .quote {
+    font-size: 2.3rem;
+    line-height: 4rem;
+  }
+}
+
+
+/*-----------------
+      videos
+-----------------*/
+video {
+  width: 100%;
+  padding-bottom: 2.5rem;
+}
+
+
+/*-----------------
+     download
+-----------------*/
+#download {
+  padding: 7.5rem 0;
+}
+
+.section-title {
+  font-family: 'Helvetica', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.button, .button:visited {
+  display: block;
+  max-width: 20rem;
+  margin: 0 auto;
+  padding: 1.5rem 2.5rem;
+  border-radius: .6rem;
+  background: #fff;
+  color: #ff001b;
+  border: 1px solid #ff001b;
+  text-align: center;
+  -webkit-transition: all .3s ease-in-out;
+}
+
+.button:hover {
+  background: #ff001b;
+  color: #fff;
+}
+
+.capes {
+  font-size: 1.8rem;
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
