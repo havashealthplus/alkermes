@@ -1,6 +1,11 @@
 /*------------------
      general
 ------------------*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
 @font-face {
   font-family: 'GalaxieCopernicus-Book';
   src: url('GalaxieCopernicus-Book.eot');
@@ -37,7 +42,9 @@ p, span, a {
        -o-font-smoothing: antialiased;
 }
 
-article, section, footer {
+article,
+section,
+div {
   outline: none;
 }
 
@@ -47,7 +54,7 @@ article, section, footer {
 -----------------*/
 header {
   position: absolute;
-  z-index: 1;
+  z-index: 10;
   height: 5rem;
   width: 100%;
 }
@@ -68,12 +75,36 @@ header img {
   float: right;
 }
 
+.button {
+  position: absolute;
+  bottom: 2.5rem;
+}
+
 
 /*-----------------
-   introduction
+       hero
 -----------------*/
 .hero {
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+  width: 100vw; 
+}
+
+.hero-inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 85%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.hero-bg svg {
   position: absolute;
+  z-index: -1;
   height: 100vh;
   width: 100vw;
   top: 0;
@@ -82,24 +113,159 @@ header img {
   bottom: 0;
 }
 
-.hero svg {
-  position: fixed;
-  height: 100vh;
-  width: 100vw;
+
+/*-----------------
+       work
+-----------------*/
+section {
+  padding: 7.5rem 0;
 }
 
-.center {
+#intro {
+  padding: 0;
+}
+
+#quotes {
+  padding: 0 0 7.5rem;
+}
+
+
+/*-----------------
+      images
+-----------------*/
+svg {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1 !important;
-  height: 100vh;
-  width: 85%;
-  max-width: 90rem;
-  margin: auto;
+}
+.relapse-st0 {
+  fill:#EEB2A3;
+  stroke:#EEB2A3;
+  stroke-width:1.51;
 }
 
+.relapse-st1 {
+  fill:#E69589;
+  stroke:#E69589;
+  stroke-width:1.51;
+}
+
+.relapse-st2 {
+  fill:#E58D7A;
+  stroke:#E58D7A;
+  stroke-width:1.51;
+}
+
+.relapse-st3 {
+  fill:#D56957;
+  stroke:#D56957;
+  stroke-width:1.51;
+}
+
+.relapse-st4 {
+  fill:#CF5547;
+  stroke:#CF5547;
+  stroke-width:1.51;
+}
+
+.relapse-st5 {
+  fill:#B6222E;
+  stroke:#B6222E;
+  stroke-width:1.51;
+}
+
+.relapse-st6 {
+  fill:#FDF1EA;
+  stroke:#FDF1EA;
+  stroke-width:1.51;
+}
+
+.hallucination-st0 {
+  fill:#1F1F1F;
+  stroke:#1F1F1F;
+  stroke-width:1.51;
+}
+
+.hallucination-st1 {
+  fill:#EF9A7C;
+  stroke:#EF9A7C;
+  stroke-width:1.51;
+}
+
+.hallucination-st2 {
+  fill:#CF5547;
+  stroke:#CF5547;
+  stroke-width:1.51;
+}
+
+.hallucination-st3 {
+  fill:#F7AE8D;
+  stroke:#F7AE8D;
+  stroke-width:1.51;
+}
+
+.hallucination-st4 {
+  fill:#424242;
+  stroke:#424242;
+  stroke-width:1.51;
+}
+
+.hallucination-st5 {
+  fill:#7C7C7C;
+  stroke:#7C7C7C;
+  stroke-width:1.51;
+}
+
+.human-st0 {
+  fill:#F5B7A8;
+  stroke:#F5B7A8;
+  stroke-width:1.51;
+}
+
+.human-st1 {
+  fill:#CE827B;
+  stroke:#CE827B;
+  stroke-width:1.51;
+}
+
+.human-st2 {
+  fill:#C57F76;
+  stroke:#C57F76;
+  stroke-width:1.51;
+}
+
+.human-st3 {
+  fill:#EB9479;
+  stroke:#EB9479;
+  stroke-width:1.51;
+}
+
+.human-st0 {
+  fill:#F5B7A8;
+  stroke:#F5B7A8;
+  stroke-width:1.51;
+}
+
+.human-st1 {
+  fill:#CE827B;
+  stroke:#CE827B;
+  stroke-width:1.51;
+}
+
+.human-st2 {
+  fill:#C57F76;
+  stroke:#C57F76;
+  stroke-width:1.51;
+}
+
+.human-st3 {
+  fill:#EB9479;
+  stroke:#EB9479;
+  stroke-width:1.51;
+}
+
+
+/*-----------------
+       fonts
+-----------------*/
 .page-title {
   margin-bottom: 2.5rem;
   font-family: 'Helvetica', sans-serif;
@@ -127,138 +293,13 @@ header img {
 }
 
 @media screen and (min-width: 768px) {
-  #intro {
-    padding-top: 15rem;
-  }
   .page-title {
     font-size: 6rem;
     letter-spacing: -0.25rem;
   }
   .page-subtitle {
-    font-size: 3rem;
-    line-height: 4.5rem;
-  }
-}
-
-
-/*-----------------
-     timeline
------------------*/
-.timeline {
-  list-style: none;
-  padding: 75px 0 75px;
-  position: relative;
-}
-
-.timeline > li {
-  margin-bottom: 20px;
-  position: relative;
-}
-
-.timeline > li:before,
-.timeline > li:after {
-  content: " ";
-  display: table;
-}
-
-.timeline > li:after {
-  clear: both;
-}
-
-.timeline > li:before,
-.timeline > li:after {
-  content: " ";
-  display: table;
-}
-
-.timeline > li:after {
-  clear: both;
-}
-
-.timeline > li > .timeline-panel {
-  width: 100%;
-  float: left;
-  border-radius: 2px;
-  padding: 20px;
-  position: relative;
-  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
-  background: #fff;
-}
-
-@media screen and (min-width: 768px) {
-  .timeline > li > .timeline-panel {
-    width: 46%;
-    padding: 30px;
-  }
-}
-
-.timeline > li.timeline-inverted > .timeline-panel {
-  float: right;
-}
-
-.timeline > li.timeline-inverted > .timeline-panel:before {
-  border-left-width: 0;
-  border-right-width: 15px;
-  left: -15px;
-  right: auto;
-}
-
-.timeline > li.timeline-inverted > .timeline-panel:after {
-  border-left-width: 0;
-  border-right-width: 14px;
-  left: -14px;
-  right: auto;
-}
-
-.timeline-title {
-  margin-top: 0;
-  color: inherit;
-}
-
-.timeline-body > p,
-.timeline-body > ul {
-  margin-bottom: 0;
-}
-
-.timeline-body > p + p {
-  margin-top: 5px;
-}
-
-.timeline-body {
-  margin: 10px 0px;
-}
-
-.timeline-heading {
-  margin-bottom: 15px;
-  padding-bottom: 5px;
-  border-bottom: 1px solid #ddd;
-}
-
-/*-----------------
-      quotes
------------------*/
-.quote {
-  margin: 0;
-  font-size: 1.8rem;
-  line-height: 3rem;
-}
-
-.author {
-  color: #f00;
-}
-
-@media screen and (min-width: 576px) {
-  .quote {
-    font-size: 2rem;
-    line-height: 3.3rem;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .quote {
-    font-size: 2.2rem;
-    line-height: 3.7rem;
+    font-size: 2.5rem;
+    line-height: 3.75rem;
   }
 }
 
@@ -273,45 +314,39 @@ video {
 
 
 /*-----------------
-     download
+      quotes
 -----------------*/
-#download {
-  padding: 7.5rem 0;
-}
-
-.section-title {
-  font-family: 'Helvetica', sans-serif;
-  font-size: 2.5rem;
-  font-weight: 700;
-  text-align: center;
-}
-
-.button, .button:visited {
-  display: block;
-  max-width: 20rem;
-  margin: 0 auto;
-  padding: 1.5rem 2.5rem;
-  border-radius: .6rem;
-  background: #fff;
-  color: #ff001b;
-  border: 1px solid #ff001b;
-  text-align: center;
-  -webkit-transition: all .3s ease-in-out;
-}
-
-.button:hover {
-  background: #ff001b;
-  color: #fff;
-}
-
-.capes {
+.quote {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin-right: auto;
+  margin-left: auto;
   font-size: 1.8rem;
-  text-decoration: none;
+  line-height: 3rem;
 }
 
+.quote-author {
+  display: block;
+  margin-bottom: 5rem;
+  color: #f00;
+}
 
+@media screen and (min-width: 768px) {
+  .quote {
+    font-size: 2rem;
+    line-height: 3.3rem;
+  }
+  .quote-author {
+    margin-bottom: 0;
+  }
+}
 
-
-
-
-
+@media screen and (min-width: 992px) {
+  .quote {
+    font-size: 2.2rem;
+    line-height: 3.6rem;
+  }
+}
