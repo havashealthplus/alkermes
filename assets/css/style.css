@@ -42,22 +42,6 @@ article, section, footer {
 }
 
 
-/*------------------
-      article
-------------------*/
-article {
-	position: relative;
-  min-height: 100%; 
-  width: 100%;
-  margin: 0;
-  clear: both;
-}
-
-section {
-  padding: 2.5rem 0;
-}
-
-
 /*-----------------
     navigation
 -----------------*/
@@ -88,8 +72,32 @@ header img {
 /*-----------------
    introduction
 -----------------*/
-#intro {
-  padding-top: 12.5rem;
+.hero {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.hero svg {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+}
+
+.center {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1 !important;
+  height: 100vh;
+  width: 85%;
+  max-width: 90rem;
+  margin: auto;
 }
 
 .page-title {
@@ -127,8 +135,8 @@ header img {
     letter-spacing: -0.25rem;
   }
   .page-subtitle {
-    font-size: 2.5rem;
-    line-height: 3.75rem;
+    font-size: 3rem;
+    line-height: 4.5rem;
   }
 }
 
@@ -140,17 +148,6 @@ header img {
   list-style: none;
   padding: 75px 0 75px;
   position: relative;
-}
-
-.timeline:before {
-  top: 0;
-  bottom: 0;
-  position: absolute;
-  content: " ";
-  width: 1px;
-  background-color: rgba(0,0,0,.15);
-  left: 50%;
-  margin-left: -0.5px;
 }
 
 .timeline > li {
@@ -193,29 +190,6 @@ header img {
   .timeline > li > .timeline-panel {
     width: 46%;
   }
-  /*.timeline > li > .timeline-panel:before {
-    position: absolute;
-    top: 26px;
-    right: -15px;
-    display: inline-block;
-    border-top: 15px solid transparent;
-    border-left: 15px solid #ccc;
-    border-right: 0 solid #ccc;
-    border-bottom: 15px solid transparent;
-    content: " ";
-  }
-
-  .timeline > li > .timeline-panel:after {
-    position: absolute;
-    top: 27px;
-    right: -14px;
-    display: inline-block;
-    border-top: 14px solid transparent;
-    border-left: 14px solid #fff;
-    border-right: 0 solid #fff;
-    border-bottom: 14px solid transparent;
-    content: " ";
-  }*/
 }
 
 .timeline > li.timeline-inverted > .timeline-panel {
@@ -332,10 +306,6 @@ video {
   font-size: 1.8rem;
   text-decoration: none;
 }
-
-
-
-
 
 
 
