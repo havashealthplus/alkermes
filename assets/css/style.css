@@ -189,6 +189,7 @@ header img {
 @media screen and (min-width: 768px) {
   .timeline > li > .timeline-panel {
     width: 46%;
+    padding: 30px;
   }
 }
 
@@ -238,6 +239,7 @@ header img {
       quotes
 -----------------*/
 .quote {
+  margin: 0;
   font-size: 1.8rem;
   line-height: 3rem;
 }
